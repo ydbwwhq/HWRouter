@@ -6,9 +6,11 @@
 //  Copyright © 2018年 shinezone. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
+typedef bool (^MHandler)(NSDictionary* params);
+static NSMutableArray *routers;
 @interface HWRouter : NSObject
-+ (void)registerRouter:(NSString*)routerName serviceName:(NSString*)serviceName;
-+ (void)performRouter:(NSString*)routerName param:(NSString*)param;
-+ (UIViewController*)getVC:(NSString*)routerName param:(NSDictionary*)param;
++ (void)addRoute:(NSString*)router handler:(MHandler)handler;
++ (void)route:(NSString *)router param:(NSDictionary*)param;
 @end
