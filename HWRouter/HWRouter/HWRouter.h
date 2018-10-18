@@ -13,4 +13,5 @@ static NSMutableArray *routers;
 @interface HWRouter : NSObject
 + (void)addRoute:(NSString*)router handler:(MHandler)handler;
 + (void)route:(NSString *)router param:(NSDictionary*)param;
++ (void)route:(NSString *)router;
 @end

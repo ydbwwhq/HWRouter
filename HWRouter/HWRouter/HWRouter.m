@@ -60,7 +60,10 @@ _Pragma("clang diagnostic pop") \
         handler(param);
     }
 }
-
++ (void)route:(NSString *)router
+{
+    [HWRouter route:router param:nil];
+}
 //+ (void)registerRouter:(NSString *)routerName serviceName:(NSString*)serviceName
 //{
 //    [HWRouter writeRouterToConfig:routerName methodName:serviceName];
